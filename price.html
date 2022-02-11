@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="card">
+      <div class="container">
+        <div class="circle">
+          <div class="image-wrapper">
+            <img
+              src="https://th.bing.com/th?q=Rupee+Symbol&w=60&h=60&c=1&rs=1&qlt=90&cb=1&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="text">
+        <div class="price">
+          <span>KR</span>
+          <h1 class="change">199</h1>
+        </div>
+        <p>RUPEE/MONTH</p>
+      </div>
+      <div class="allprice">
+        <div class="check">
+          <h2 onclick="changePrice(1)">10</h2>
+        </div>
+        <div class="check">
+          <h2 onclick="changePrice(2)">25</h2>
+        </div>
+        <div class="check">
+          <h2 onclick="changePrice(3)">50</h2>
+        </div>
+        <div class="check">
+          <h2 onclick="changePrice(4)">100</h2>
+        </div>
+      </div>
+      <div class="downloads">
+        <p>Downloads per Month</p>
+      </div>
+      <div class="btn">
+        <button class="subscribe">Subscribe</button>
+      </div>
+    </div>
+    <script>
+      //   const data = [199, 299, 599, 999];
+      //   function changePrice(id) {
+      //     for (let i = 0; i < data.length; i++) {
+      //       console.log(data);
+      //       const updatePrice = document.querySelector(".price");
+      //       console.log(updatePrice);
+      //       if ((id = 1)) {
+      //         updatePrice.innerText = "200";
+      //       }
+      //     }
+      //   }
+      const data = [
+        { id: 1, price: 199 },
+        { id: 2, price: 299 },
+        { id: 3, price: 399 },
+        { id: 4, price: 499 },
+      ];
+
+      function changePrice(id) {
+        for (let i = 0; i < data.length; i++) {
+          //   console.log(data);
+          if (data[i].id == id) {
+            const updatePrice = document.querySelector(".change");
+            // console.log(updatePrice);
+            updatePrice.innerHTML = data[i].price;
+          }
+        }
+      }
+    </script>
+  </body>
+</html>
